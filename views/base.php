@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Repretec Trading</title>
+        <title>GeoPark</title>
 
         <!-- Bootstrap core CSS -->
         <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="?"><span class="glyphicon glyphicon-home"></span> Repretec</a>
+                <a class="navbar-brand" href="?"><span class="glyphicon glyphicon-home"></span> GeoPark</a>
             </div>
             <!-- Menu -->
             <?php include('views/menu.php'); ?>

@@ -238,3 +238,381 @@ Stack trace:
 #1 /var/www/sistemas/siganet/daniel/repretec/index.php(9): Idioma->getProdutos(true, 'ativo='1' AND d...', Array)
 #2 {main}
   thrown in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ORM.php on line 290
+[12-May-2015 23:01:28] PHP Fatal error:  Class 'Idioma' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmPagina.php on line 21
+[12-May-2015 23:01:28] PHP Stack trace:
+[12-May-2015 23:01:28] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:01:28] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:01:28] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:01:28] PHP   4. commands\AdmPagina->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:01:51] PHP Fatal error:  Class 'Produto' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmProduto.php on line 25
+[12-May-2015 23:01:51] PHP Stack trace:
+[12-May-2015 23:01:51] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:01:51] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:01:51] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:01:51] PHP   4. commands\AdmProduto->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:04:14] PHP Fatal error:  Class 'Idioma' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmCategoria.php on line 19
+[12-May-2015 23:04:14] PHP Stack trace:
+[12-May-2015 23:04:14] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:04:14] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:04:14] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:04:14] PHP   4. commands\AdmCategoria->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:05:53] PHP Fatal error:  Class 'Idioma' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmProduto.php on line 78
+[12-May-2015 23:05:53] PHP Stack trace:
+[12-May-2015 23:05:53] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:05:53] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:05:53] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:05:53] PHP   4. commands\AdmProduto->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:10] PHP Fatal error:  Class 'Idioma' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php on line 18
+[12-May-2015 23:08:10] PHP Stack trace:
+[12-May-2015 23:08:10] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:08:10] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:08:10] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:10] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:12] PHP Fatal error:  Class 'Idioma' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php on line 18
+[12-May-2015 23:08:12] PHP Stack trace:
+[12-May-2015 23:08:12] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:08:12] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:08:12] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:12] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:24] PHP Warning:  include(veiculos.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in C:\Wamp\www\ProjetoGeografico\views\base.php on line 57
+[12-May-2015 23:08:24] PHP Stack trace:
+[12-May-2015 23:08:24] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:08:24] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:08:24] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:24] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:24] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:08:24] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:08:24] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:08:24] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'veiculos.php' for inclusion (include_path='.;C:\php\pear') in C:\Wamp\www\ProjetoGeografico\views\base.php on line 57
+[12-May-2015 23:08:24] PHP Stack trace:
+[12-May-2015 23:08:24] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:08:24] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:08:24] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:24] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:24] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:08:24] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:08:24] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:08:35] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 37
+[12-May-2015 23:08:35] PHP Stack trace:
+[12-May-2015 23:08:35] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:08:35] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:08:35] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:35] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:35] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:08:35] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:08:35] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:08:35] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:08:35] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 49
+[12-May-2015 23:08:35] PHP Stack trace:
+[12-May-2015 23:08:35] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:08:35] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:08:35] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:35] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:08:35] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:08:35] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:08:35] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:08:35] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:09:08] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 37
+[12-May-2015 23:09:08] PHP Stack trace:
+[12-May-2015 23:09:08] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:08] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:08] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:08] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:08] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:09:08] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:09:08] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:09:08] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:09:08] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 49
+[12-May-2015 23:09:08] PHP Stack trace:
+[12-May-2015 23:09:08] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:08] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:08] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:08] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:08] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:09:08] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:09:08] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:09:08] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:09:10] PHP Fatal error:  Class 'commands\CategoriaServicos' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php on line 20
+[12-May-2015 23:09:10] PHP Stack trace:
+[12-May-2015 23:09:10] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:10] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:10] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:10] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:13] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 37
+[12-May-2015 23:09:13] PHP Stack trace:
+[12-May-2015 23:09:13] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:13] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:13] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:13] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:13] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:09:13] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:09:13] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:09:13] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:09:13] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 49
+[12-May-2015 23:09:13] PHP Stack trace:
+[12-May-2015 23:09:13] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:13] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:13] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:13] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:13] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:09:13] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:09:13] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:09:13] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:09:16] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 37
+[12-May-2015 23:09:16] PHP Stack trace:
+[12-May-2015 23:09:16] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:16] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:16] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:16] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:16] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:09:16] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:09:16] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:09:16] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:09:16] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 49
+[12-May-2015 23:09:16] PHP Stack trace:
+[12-May-2015 23:09:16] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:16] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:16] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:16] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:16] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:09:16] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:09:16] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:09:16] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:09:28] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 37
+[12-May-2015 23:09:28] PHP Stack trace:
+[12-May-2015 23:09:28] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:28] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:28] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:28] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:28] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:09:28] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:09:28] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:09:28] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:09:28] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 49
+[12-May-2015 23:09:28] PHP Stack trace:
+[12-May-2015 23:09:28] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:28] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:28] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:28] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:28] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:09:28] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:09:28] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:09:28] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:09:30] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 37
+[12-May-2015 23:09:30] PHP Stack trace:
+[12-May-2015 23:09:30] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:30] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:30] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:30] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:30] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:09:30] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:09:30] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:09:30] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:09:30] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 49
+[12-May-2015 23:09:30] PHP Stack trace:
+[12-May-2015 23:09:30] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:09:30] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:09:30] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:30] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:09:30] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:33
+[12-May-2015 23:09:30] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:09:30] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:09:30] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:10:42] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculo.php on line 83
+[12-May-2015 23:10:42] PHP Stack trace:
+[12-May-2015 23:10:42] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:10:42] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:10:42] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:10:42] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:10:42] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:23
+[12-May-2015 23:10:42] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:10:42] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:10:42] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:10:42] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculo.php on line 94
+[12-May-2015 23:10:42] PHP Stack trace:
+[12-May-2015 23:10:42] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:10:42] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:10:42] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:10:42] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:10:42] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:23
+[12-May-2015 23:10:42] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:10:42] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:10:42] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:11:49] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculo.php on line 62
+[12-May-2015 23:11:49] PHP Stack trace:
+[12-May-2015 23:11:49] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:11:49] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:11:49] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:11:49] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:11:49] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:23
+[12-May-2015 23:11:49] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:11:49] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:11:49] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:11:49] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculo.php on line 73
+[12-May-2015 23:11:49] PHP Stack trace:
+[12-May-2015 23:11:49] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:11:49] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:11:49] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:11:49] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:11:49] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:23
+[12-May-2015 23:11:49] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:11:49] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:11:49] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:24:55] PHP Fatal error:  Class 'commands\Veiculo' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php on line 38
+[12-May-2015 23:24:55] PHP Stack trace:
+[12-May-2015 23:24:55] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:24:55] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:24:55] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:24:55] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:26:06] PHP Fatal error:  Class 'commands\Veiculo' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php on line 38
+[12-May-2015 23:26:06] PHP Stack trace:
+[12-May-2015 23:26:06] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:26:06] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:26:06] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:26:06] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:26:18] PHP Fatal error:  Class 'commands\Veiculo' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php on line 38
+[12-May-2015 23:26:18] PHP Stack trace:
+[12-May-2015 23:26:18] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:26:18] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:26:18] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:26:18] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:27:49] PHP Fatal error:  Call to a member function getId() on a non-object in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php on line 43
+[12-May-2015 23:27:49] PHP Stack trace:
+[12-May-2015 23:27:49] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:27:49] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:27:49] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:27:49] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:16] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 37
+[12-May-2015 23:28:16] PHP Stack trace:
+[12-May-2015 23:28:16] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:28:16] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:28:16] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:16] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:16] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:20
+[12-May-2015 23:28:16] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:28:16] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:28:16] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:28:16] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 49
+[12-May-2015 23:28:16] PHP Stack trace:
+[12-May-2015 23:28:16] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:28:16] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:28:16] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:16] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:16] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:20
+[12-May-2015 23:28:16] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:28:16] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:28:16] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:28:22] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 37
+[12-May-2015 23:28:22] PHP Stack trace:
+[12-May-2015 23:28:22] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:28:22] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:28:22] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:22] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:22] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:20
+[12-May-2015 23:28:22] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:28:22] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:28:22] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:28:22] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 49
+[12-May-2015 23:28:22] PHP Stack trace:
+[12-May-2015 23:28:22] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:28:22] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:28:22] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:22] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:22] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:20
+[12-May-2015 23:28:22] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:28:22] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:28:22] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:28:26] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 37
+[12-May-2015 23:28:26] PHP Stack trace:
+[12-May-2015 23:28:26] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:28:26] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:28:26] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:26] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:26] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:20
+[12-May-2015 23:28:26] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:28:26] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:28:26] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:28:26] PHP Warning:  Invalid argument supplied for foreach() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 49
+[12-May-2015 23:28:26] PHP Stack trace:
+[12-May-2015 23:28:26] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:28:26] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:28:26] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:26] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:28:26] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:20
+[12-May-2015 23:28:26] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:28:26] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:28:26] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:31:02] PHP Fatal error:  Call to a member function getAll() on a non-object in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php on line 20
+[12-May-2015 23:31:02] PHP Stack trace:
+[12-May-2015 23:31:02] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:31:02] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:31:02] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:31:02] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:31:12] PHP Fatal error:  Call to undefined method Veiculo::getTitulo() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 84
+[12-May-2015 23:31:12] PHP Stack trace:
+[12-May-2015 23:31:12] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:31:12] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:31:12] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:31:12] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:31:12] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:23
+[12-May-2015 23:31:12] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:31:12] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:31:12] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:31:29] PHP Fatal error:  Call to undefined method Veiculo::getTitulo() in C:\Wamp\www\ProjetoGeografico\views\veiculos.php on line 97
+[12-May-2015 23:31:29] PHP Stack trace:
+[12-May-2015 23:31:29] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:31:29] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:31:29] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:31:29] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:31:29] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:23
+[12-May-2015 23:31:29] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:31:29] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:31:29] PHP   8. include() C:\Wamp\www\ProjetoGeografico\views\base.php:57
+[12-May-2015 23:31:50] PHP Fatal error:  Class 'Idioma' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php on line 55
+[12-May-2015 23:31:50] PHP Stack trace:
+[12-May-2015 23:31:50] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:31:50] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:31:50] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:31:50] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:36:05] PHP Fatal error:  Class 'Idioma' not found in C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php on line 55
+[12-May-2015 23:36:05] PHP Stack trace:
+[12-May-2015 23:36:05] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:36:05] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:36:05] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:36:05] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:36:20] PHP Warning:  include(produtos.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in C:\Wamp\www\ProjetoGeografico\views\base.php on line 57
+[12-May-2015 23:36:20] PHP Stack trace:
+[12-May-2015 23:36:20] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:36:20] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:36:20] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:36:20] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:36:20] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:54
+[12-May-2015 23:36:20] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:36:20] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:36:20] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'produtos.php' for inclusion (include_path='.;C:\php\pear') in C:\Wamp\www\ProjetoGeografico\views\base.php on line 57
+[12-May-2015 23:36:20] PHP Stack trace:
+[12-May-2015 23:36:20] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:36:20] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:36:20] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:36:20] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:36:20] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:54
+[12-May-2015 23:36:20] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:36:20] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:37:50] PHP Warning:  include(produtos.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in C:\Wamp\www\ProjetoGeografico\views\base.php on line 57
+[12-May-2015 23:37:50] PHP Stack trace:
+[12-May-2015 23:37:50] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:37:50] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:37:50] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:37:50] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:37:50] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:54
+[12-May-2015 23:37:50] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:37:50] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
+[12-May-2015 23:37:50] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'produtos.php' for inclusion (include_path='.;C:\php\pear') in C:\Wamp\www\ProjetoGeografico\views\base.php on line 57
+[12-May-2015 23:37:50] PHP Stack trace:
+[12-May-2015 23:37:50] PHP   1. {main}() C:\Wamp\www\ProjetoGeografico\index.php:0
+[12-May-2015 23:37:50] PHP   2. FrontController->process() C:\Wamp\www\ProjetoGeografico\index.php:16
+[12-May-2015 23:37:50] PHP   3. ReflectionMethod->invokeArgs() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:37:50] PHP   4. commands\AdmVeiculo->execute() C:\Wamp\www\ProjetoGeografico\classes\FrontController.php:62
+[12-May-2015 23:37:50] PHP   5. commands\Command->getRenderViewInBase() C:\Wamp\www\ProjetoGeografico\classes\commands\AdmVeiculo.php:54
+[12-May-2015 23:37:50] PHP   6. commands\Command->getRenderView() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:67
+[12-May-2015 23:37:50] PHP   7. include() C:\Wamp\www\ProjetoGeografico\classes\commands\Command.php:51
