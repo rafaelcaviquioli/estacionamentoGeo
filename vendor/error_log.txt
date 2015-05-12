@@ -1,0 +1,240 @@
+[10-Feb-2015 10:31:38 America/Sao_Paulo] PHP Fatal error:  Call to undefined method SubCategoria::getImagens() in /var/www/sistemas/siganet/medsy/admin/classes/commands/AdmSubCategoria.php on line 32
+[10-Feb-2015 11:27:51 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Categoria::getSubCategorias() in /var/www/sistemas/siganet/medsy/produto.php on line 93
+[10-Feb-2015 11:31:07 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Categoria::getProdutos() in /var/www/sistemas/siganet/medsy/produto.php on line 94
+[10-Feb-2015 15:44:57 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/medsy/admin/views/produtos.php on line 48
+[10-Feb-2015 15:45:33 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/medsy/admin/views/produtos.php on line 48
+[10-Feb-2015 15:45:41 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/medsy/admin/views/produtos.php on line 48
+[11-Feb-2015 10:39:23 America/Sao_Paulo] PHP Warning:  implode(): Invalid arguments passed in /var/www/sistemas/siganet/medsy/produto.php on line 135
+[11-Feb-2015 10:39:23 America/Sao_Paulo] PHP Warning:  implode(): Invalid arguments passed in /var/www/sistemas/siganet/medsy/produto.php on line 135
+[25-Feb-2015 08:51:26 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Pagina::getTitulo() in /var/www/sistemas/siganet/daniel/repretec/admin/views/paginas.php on line 27
+[25-Feb-2015 09:09:41 America/Sao_Paulo] PHP Warning:  include(pagina.php): failed to open stream: No such file or directory in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[25-Feb-2015 09:09:41 America/Sao_Paulo] PHP Warning:  include(): Failed opening 'pagina.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[25-Feb-2015 09:11:23 America/Sao_Paulo] PHP Warning:  include(pagina.php): failed to open stream: No such file or directory in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[25-Feb-2015 09:11:23 America/Sao_Paulo] PHP Warning:  include(): Failed opening 'pagina.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[25-Feb-2015 09:29:10 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 137
+[25-Feb-2015 09:44:10 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 24
+[25-Feb-2015 09:44:54 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 24
+[25-Feb-2015 09:44:57 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 24
+[25-Feb-2015 09:45:00 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 24
+[25-Feb-2015 09:45:09 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 24
+[25-Feb-2015 09:46:03 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 24
+[25-Feb-2015 09:49:46 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 24
+[25-Feb-2015 09:53:09 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 25
+[25-Feb-2015 09:53:16 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 25
+[25-Feb-2015 09:56:19 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 09:57:33 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 09:57:44 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 09:57:59 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 09:58:25 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 09:58:47 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 09:59:51 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:01:34 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:01:55 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:02:14 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:02:39 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:03:01 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:03:03 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:09:25 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:11:34 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:11:51 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:12:06 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:12:26 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:12:45 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:12:47 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:12:51 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 10:12:53 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:04:30 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:04:32 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:04:36 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:04:37 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:04:40 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:04:44 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:04:46 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:04:50 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:04:51 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:04:57 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:05:05 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:05:06 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:05:10 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:05:11 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:05:20 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:05:21 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:08:07 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:08:44 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 138
+[25-Feb-2015 11:29:33 America/Sao_Paulo] PHP Fatal error:  Class 'ORM\Texto' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/TextoORM.php on line 109
+[25-Feb-2015 11:31:27 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:32:00 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::setAtivo() in /var/www/sistemas/siganet/daniel/repretec/admin/classes/commands/AdmTexto.php on line 52
+[25-Feb-2015 11:34:59 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:39:19 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:39:24 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::setIdioma() in /var/www/sistemas/siganet/daniel/repretec/admin/classes/commands/AdmTexto.php on line 60
+[25-Feb-2015 11:40:02 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getIdiomaObj() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 85
+[25-Feb-2015 11:40:34 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getMenu() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 86
+[25-Feb-2015 11:40:42 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:40:57 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:40:59 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:40:59 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:41:13 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:43:31 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:43:47 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:45:12 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:45:17 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:45:52 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:45:54 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 58
+[25-Feb-2015 11:46:22 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:48:37 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:49:09 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:50:04 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:50:19 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:50:35 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:51:28 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:51:52 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:52:04 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:53:24 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:53:43 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:54:31 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 11:54:34 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 13:45:05 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 13:49:30 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 13:49:34 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 13:49:39 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 13:49:44 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 13:49:48 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 13:49:51 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 13:49:54 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 13:49:59 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 13:50:20 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 146
+[25-Feb-2015 14:02:18 America/Sao_Paulo] PHP Fatal error:  Class 'UploadImagem' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/commands/AdmImagem.php on line 34
+[25-Feb-2015 14:02:34 America/Sao_Paulo] PHP Fatal error:  Class 'UploadImagem' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/commands/AdmImagem.php on line 34
+[25-Feb-2015 14:06:09 America/Sao_Paulo] PHP Fatal error:  Access to undeclared static property: Config::$urlSite in /var/www/sistemas/siganet/daniel/repretec/admin/miniaturaImagem.php on line 18
+[25-Feb-2015 14:06:46 America/Sao_Paulo] PHP Fatal error:  Access to undeclared static property: Config::$urlSite in /var/www/sistemas/siganet/daniel/repretec/admin/miniaturaImagem.php on line 18
+[25-Feb-2015 14:06:51 America/Sao_Paulo] PHP Fatal error:  Access to undeclared static property: Config::$urlSite in /var/www/sistemas/siganet/daniel/repretec/admin/miniaturaImagem.php on line 18
+[25-Feb-2015 14:06:51 America/Sao_Paulo] PHP Fatal error:  Access to undeclared static property: Config::$urlSite in /var/www/sistemas/siganet/daniel/repretec/admin/miniaturaImagem.php on line 18
+[25-Feb-2015 17:36:09 America/Sao_Paulo] PHP Fatal error:  Call to a member function isLoad() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 65
+[25-Feb-2015 17:42:32 America/Sao_Paulo] PHP Warning:  explode() expects parameter 2 to be string, object given in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 76
+[25-Feb-2015 17:42:32 America/Sao_Paulo] PHP Warning:  end() expects parameter 1 to be array, null given in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 76
+[26-Feb-2015 09:22:48 America/Sao_Paulo] PHP Warning:  explode() expects parameter 2 to be string, object given in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 76
+[26-Feb-2015 09:22:48 America/Sao_Paulo] PHP Warning:  end() expects parameter 1 to be array, null given in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 76
+[26-Feb-2015 09:22:58 America/Sao_Paulo] PHP Warning:  explode() expects parameter 2 to be string, object given in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 76
+[26-Feb-2015 09:22:58 America/Sao_Paulo] PHP Warning:  end() expects parameter 1 to be array, null given in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 76
+[26-Feb-2015 10:20:24 America/Sao_Paulo] PHP Warning:  unlink(arquivo/uploads/tmp_PEDIDO 10(1).pdf): No such file or directory in /var/www/sistemas/siganet/daniel/repretec/admin/classes/Arquivo.php on line 34
+[26-Feb-2015 11:43:31 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/produto.php on line 57
+[26-Feb-2015 17:31:36 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Servico::getDestaque() in /var/www/sistemas/siganet/daniel/repretec/admin/views/servico.php on line 49
+[26-Feb-2015 17:37:54 America/Sao_Paulo] PHP Fatal error:  Call to a member function getCatalogo() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/produto.php on line 99
+[26-Feb-2015 17:51:25 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/servico.php on line 57
+[27-Feb-2015 09:11:32 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/produto.php on line 227
+[27-Feb-2015 09:11:32 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/produto.php on line 296
+[27-Feb-2015 10:28:30 America/Sao_Paulo] PHP Fatal error:  Call to a member function set() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/classes/Idioma.php on line 62
+[27-Feb-2015 10:34:04 America/Sao_Paulo] PHP Fatal error:  Call to a member function set() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/classes/Idioma.php on line 62
+[27-Feb-2015 10:38:03 America/Sao_Paulo] PHP Fatal error:  Class 'ORM\Pagina' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/PaginaORM.php on line 174
+[27-Feb-2015 10:38:44 America/Sao_Paulo] PHP Fatal error:  Class 'ORM\Pagina' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/PaginaORM.php on line 174
+[27-Feb-2015 10:38:46 America/Sao_Paulo] PHP Fatal error:  Class 'ORM\Pagina' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/PaginaORM.php on line 174
+[27-Feb-2015 10:42:48 America/Sao_Paulo] PHP Fatal error:  Class 'ORM\Produto' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ProdutoORM.php on line 198
+[27-Feb-2015 11:38:13 America/Sao_Paulo] PHP Fatal error:  Class 'ORM\Servico' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ServicoORM.php on line 199
+[27-Feb-2015 11:38:33 America/Sao_Paulo] PHP Fatal error:  Class 'ORM\Estrutura' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/EstruturaORM.php on line 182
+[27-Feb-2015 11:38:52 America/Sao_Paulo] PHP Fatal error:  Call to a member function get() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/classes/Idioma.php on line 92
+[27-Feb-2015 11:49:07 America/Sao_Paulo] PHP Fatal error:  Call to a member function getPaginas() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 7
+[27-Feb-2015 11:49:12 America/Sao_Paulo] PHP Fatal error:  Call to a member function getPaginas() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 7
+[27-Feb-2015 11:49:13 America/Sao_Paulo] PHP Fatal error:  Call to a member function getPaginas() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 7
+[27-Feb-2015 11:49:13 America/Sao_Paulo] PHP Fatal error:  Call to a member function getPaginas() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 7
+[27-Feb-2015 11:49:13 America/Sao_Paulo] PHP Fatal error:  Call to a member function getPaginas() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 7
+[27-Feb-2015 11:51:17 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Idioma::getIdiomaAtual() in /var/www/sistemas/siganet/daniel/repretec/index.php on line 6
+[27-Feb-2015 11:51:46 America/Sao_Paulo] PHP Fatal error:  Call to a member function isLoad() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/classes/Idioma.php on line 93
+[27-Feb-2015 11:52:10 America/Sao_Paulo] PHP Fatal error:  Call to a member function isLoad() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/classes/Idioma.php on line 93
+[27-Feb-2015 11:52:37 America/Sao_Paulo] PHP Fatal error:  Call to a member function getPaginas() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 7
+[27-Feb-2015 11:52:51 America/Sao_Paulo] PHP Fatal error:  Call to a member function getPaginas() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 7
+[27-Feb-2015 14:37:07 America/Sao_Paulo] PHP Fatal error:  Call to a member function getPaginas() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 7
+[27-Feb-2015 14:37:40 America/Sao_Paulo] PHP Fatal error:  Call to a member function getPaginas() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 7
+[27-Feb-2015 14:47:09 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'Exception' with message 'Erro ao executar metodo getAll na objeto Produto' in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ORM.php:290
+Stack trace:
+#0 /var/www/sistemas/siganet/daniel/repretec/admin/classes/Idioma.php(50): ORM\ORM->getAll('idioma='2' AND ...', Array, '*')
+#1 /var/www/sistemas/siganet/daniel/repretec/index.php(9): Idioma->getProdutos(false, 'ativo='1' AND d...', Array)
+#2 {main}
+  thrown in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ORM.php on line 290
+[27-Feb-2015 15:45:28 America/Sao_Paulo] PHP Fatal error:  Call to a member function getNome() on a non-object in /var/www/sistemas/siganet/daniel/repretec/solucoes.php on line 126
+[27-Feb-2015 16:21:51 America/Sao_Paulo] PHP Fatal error:  Call to a member function getNome() on a non-object in /var/www/sistemas/siganet/daniel/repretec/produtos.php on line 131
+[27-Feb-2015 16:23:27 America/Sao_Paulo] PHP Fatal error:  Call to a member function getNome() on a non-object in /var/www/sistemas/siganet/daniel/repretec/produtos.php on line 131
+[27-Feb-2015 16:37:07 America/Sao_Paulo] PHP Fatal error:  Call to a member function getNome() on a non-object in /var/www/sistemas/siganet/daniel/repretec/servicos.php on line 137
+[27-Feb-2015 16:37:10 America/Sao_Paulo] PHP Fatal error:  Call to a member function getNome() on a non-object in /var/www/sistemas/siganet/daniel/repretec/servicos.php on line 137
+[02-Mar-2015 08:41:41 America/Sao_Paulo] PHP Fatal error:  Class 'ORM\Certificacao' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/CertificacaoORM.php on line 182
+[02-Mar-2015 08:42:06 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'Exception' with message 'Erro ao executar metodo getAll na objeto Certificacao' in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ORM.php:290
+Stack trace:
+#0 /var/www/sistemas/siganet/daniel/repretec/admin/classes/Idioma.php(68): ORM\ORM->getAll('idioma='2' AND ...', Array, '*')
+#1 /var/www/sistemas/siganet/daniel/repretec/certificacoes.php(9): Idioma->getCertificacoes(true, 'ativo='1'', Array)
+#2 {main}
+  thrown in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ORM.php on line 290
+[02-Mar-2015 08:42:33 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 84
+[02-Mar-2015 08:42:33 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 94
+[02-Mar-2015 08:42:42 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 84
+[02-Mar-2015 08:42:42 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 94
+[02-Mar-2015 08:42:44 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 84
+[02-Mar-2015 08:42:44 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 94
+[02-Mar-2015 08:42:45 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 84
+[02-Mar-2015 08:42:45 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 94
+[02-Mar-2015 08:42:47 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 84
+[02-Mar-2015 08:42:47 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 94
+[02-Mar-2015 08:45:33 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'Exception' with message 'Erro ao executar metodo getAll na objeto Certificacao' in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ORM.php:290
+Stack trace:
+#0 /var/www/sistemas/siganet/daniel/repretec/admin/classes/Idioma.php(68): ORM\ORM->getAll('idioma='1' AND ...', Array, '*')
+#1 /var/www/sistemas/siganet/daniel/repretec/contato.php(9): Idioma->getCertificacoes(true, 'ativo='1'', Array)
+#2 {main}
+  thrown in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ORM.php on line 290
+[02-Mar-2015 08:56:23 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:56:24 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:56:42 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:56:43 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:57:04 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:58:16 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:58:17 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:58:17 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:58:19 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:58:19 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:58:31 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTtiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 08:58:34 America/Sao_Paulo] PHP Fatal error:  Call to undefined method Texto::getTtiulo() in /var/www/sistemas/siganet/daniel/repretec/contato.php on line 121
+[02-Mar-2015 09:02:27 America/Sao_Paulo] PHP Fatal error:  Call to a member function getDescricao() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 59
+[02-Mar-2015 09:03:58 America/Sao_Paulo] PHP Fatal error:  Call to a member function getDescricao() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 59
+[02-Mar-2015 09:04:38 America/Sao_Paulo] PHP Fatal error:  Call to a member function getArquivo() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/texto.php on line 65
+[02-Mar-2015 09:12:57 America/Sao_Paulo] PHP Fatal error:  Call to a member function getTexto() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 16
+[02-Mar-2015 09:21:32 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 85
+[02-Mar-2015 09:21:32 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 95
+[02-Mar-2015 09:21:36 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 85
+[02-Mar-2015 09:21:36 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 95
+[02-Mar-2015 09:22:22 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 85
+[02-Mar-2015 09:22:22 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 95
+[02-Mar-2015 09:22:23 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 85
+[02-Mar-2015 09:22:23 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 95
+[02-Mar-2015 09:23:11 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 85
+[02-Mar-2015 09:23:11 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 95
+[02-Mar-2015 09:23:15 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 85
+[02-Mar-2015 09:23:15 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/certificacoes.php on line 95
+[02-Mar-2015 09:39:33 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/certificacoes.php on line 31
+[02-Mar-2015 09:40:09 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/certificacoes.php on line 31
+[02-Mar-2015 09:40:22 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/certificacoes.php on line 31
+[02-Mar-2015 09:45:34 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/certificacoes.php on line 31
+[02-Mar-2015 09:45:38 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/certificacoes.php on line 31
+[02-Mar-2015 09:49:40 America/Sao_Paulo] PHP Fatal error:  Class 'commands\Certificacao' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/commands/AdmEstrutura.php on line 50
+[02-Mar-2015 10:07:19 America/Sao_Paulo] PHP Warning:  in_array() expects parameter 2 to be array, null given in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 68
+[02-Mar-2015 10:56:50 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/produto.php on line 93
+[02-Mar-2015 11:00:06 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/produto.php on line 93
+[02-Mar-2015 11:03:08 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/produto.php on line 229
+[02-Mar-2015 11:03:08 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /var/www/sistemas/siganet/daniel/repretec/admin/views/produto.php on line 284
+[02-Mar-2015 11:21:10 America/Sao_Paulo] PHP Fatal error:  Call to a member function getNome() on a non-object in /var/www/sistemas/siganet/daniel/repretec/produtos.php on line 140
+[02-Mar-2015 11:21:13 America/Sao_Paulo] PHP Fatal error:  Call to a member function getNome() on a non-object in /var/www/sistemas/siganet/daniel/repretec/produtos.php on line 140
+[02-Mar-2015 11:21:14 America/Sao_Paulo] PHP Fatal error:  Call to a member function getNome() on a non-object in /var/www/sistemas/siganet/daniel/repretec/produtos.php on line 140
+[02-Mar-2015 11:55:14 America/Sao_Paulo] PHP Fatal error:  Class 'ORM\CategoriaServicosORM' not found in /var/www/sistemas/siganet/daniel/repretec/admin/classes/CategoriaServicos.php on line 9
+[02-Mar-2015 11:56:01 America/Sao_Paulo] PHP Warning:  include(categoriaServicos.php): failed to open stream: No such file or directory in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[02-Mar-2015 11:56:01 America/Sao_Paulo] PHP Warning:  include(): Failed opening 'categoriaServicos.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[02-Mar-2015 11:56:04 America/Sao_Paulo] PHP Warning:  include(categoriaServicos.php): failed to open stream: No such file or directory in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[02-Mar-2015 11:56:04 America/Sao_Paulo] PHP Warning:  include(): Failed opening 'categoriaServicos.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[02-Mar-2015 11:56:11 America/Sao_Paulo] PHP Warning:  include(categoriaServicos.php): failed to open stream: No such file or directory in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[02-Mar-2015 11:56:11 America/Sao_Paulo] PHP Warning:  include(): Failed opening 'categoriaServicos.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[02-Mar-2015 11:56:22 America/Sao_Paulo] PHP Warning:  include(categoriaServicos.php): failed to open stream: No such file or directory in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[02-Mar-2015 11:56:22 America/Sao_Paulo] PHP Warning:  include(): Failed opening 'categoriaServicos.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/sistemas/siganet/daniel/repretec/admin/views/base.php on line 57
+[03-Mar-2015 09:06:12 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on a non-object in /var/www/sistemas/siganet/daniel/repretec/admin/views/pagina.php on line 24
+[16-Mar-2015 08:49:39 America/Sao_Paulo] PHP Fatal error:  Cannot use object of type Estrutura as array in /var/www/sistemas/siganet/daniel/repretec/index.php on line 183
+[16-Mar-2015 08:50:25 America/Sao_Paulo] PHP Fatal error:  Call to a member function getImagens() on a non-object in /var/www/sistemas/siganet/daniel/repretec/index.php on line 169
+[16-Mar-2015 08:51:25 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'Exception' with message 'Erro ao executar metodo getAll na objeto Produto' in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ORM.php:290
+Stack trace:
+#0 /var/www/sistemas/siganet/daniel/repretec/admin/classes/Idioma.php(52): ORM\ORM->getAll('idioma='2' AND ...', Array, '*')
+#1 /var/www/sistemas/siganet/daniel/repretec/index.php(9): Idioma->getProdutos(true, 'ativo='1' AND d...', Array)
+#2 {main}
+  thrown in /var/www/sistemas/siganet/daniel/repretec/admin/classes/ORM/ORM.php on line 290
