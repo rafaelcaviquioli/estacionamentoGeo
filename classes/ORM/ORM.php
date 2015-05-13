@@ -8,8 +8,7 @@
 
 namespace ORM;
 
-use \Exception,
-    \Connection;
+use \ConnectionPDO;
 
 abstract class ORM {
     /*
@@ -18,7 +17,7 @@ abstract class ORM {
 
     protected $primaryKey;
     /*
-     * Nome  do objeto que est herdando a classe Entidade.
+     * Nome  do objeto que est� herdando a classe Entidade.
      */
     protected $nomeEntidade;
 
@@ -28,22 +27,21 @@ abstract class ORM {
     protected $tabelaEntidade;
 
     /*
-     * Lista de atributos que participarão da persistência no banco de dados
+     * Lista de atributos que participar�o da persist�ncia no banco de dados
      */
     protected $atributosPersistencia;
-    //Cria exceo padro para objeto nula
+    //Cria exce��o padr�o para objeto nula
     static $ExceptionEntidadeNula;
 
     public function __construct($nomeEntidade, $tabelaEntidade, $primaryKey) {
         //construtor da classe ConexaoRoot
-
         $this->nomeEntidade = $nomeEntidade;
         $this->setTabelaEntidade($tabelaEntidade);
 
         $this->primaryKey = $primaryKey;
 
-        //Cria exceo padro para objeto nula
-        self::$ExceptionEntidadeNula = new \Exception("Erro!, a objeto " . $this->nomeEntidade . " não foi carregada.");
+        //Cria exce��o padr�o para objeto nula
+        self:$ExceptionEntidadeNula = new \Exception("Erro!, a objeto " . $this->nomeEntidade . " n�o foi carregada.");
     }
 
     /* beforeInsert
@@ -54,51 +52,66 @@ abstract class ORM {
         return true;
     }
 
-    /* beforeSave
-     *  Método chamado antes de qualquer save.
-     */
-
-    protected function beforeSave() {
-        return true;
-    }
-
     /* insert()
-     * Metodo responsável por apenas criar o registro no banco de dados com a chave primária.
+     * Metodo respons�vel por apenas criar o registro no banco de dados com a chave prim�ria.
      */
 
     private function insert() {
         try {
             $this->beforeInsert();
-        } catch (Exception $exIgnore) {
-
+        } catch (\Exception $exIgnore) {
+            
         }
         $primaryKey = $this->primaryKey;
-        //Verifica se a objeto não está criada.
+        //Verifica se a objeto n�o est� criada.
         if (!$this->isLoad()) {
-            $sql = "INSERT INTO " . $this->tabelaEntidade . " (" . $this->primaryKey . ") VALUES (NULL)";
-            $conexao = Connection::getConnection();
-            if ($conexao->query($sql)) {
-                $this->$primaryKey = $conexao->insert_id;
+
+            $campos = implode(', ', $this->atributosPersistencia);
+
+            foreach ($this->atributosPersistencia as $atributo) {
+                $valuesDoisPonto[] = ":$atributo ";
+
+                if (is_null($this->$atributo)) {
+                    $this->$atributo = "";
+                }
+            }
+
+            $valuesDoisPonto = implode(", ", $valuesDoisPonto);
+
+            $sql = "INSERT INTO " . $this->tabelaEntidade . " ($campos) VALUES ($valuesDoisPonto)";
+            $conexao = ConnectionPDO::getConnection();
+
+            if ($stmt = $conexao->prepare($sql)) {
+                $i = 1;
+                foreach ($this->atributosPersistencia as $atributo) {
+                    $valores[":" . $atributo] = $this->$atributo;
+                }
+                $stmt->execute($valores);
+
+                //Postgresql
+                //$this->$primaryKey = $conexao->lastInsertId($this->tabelaEntidade . "_" . $this->primaryKey . "_seq");
+                //Mysql
+                $this->$primaryKey = $conexao->lastInsertId();
+                unset($conexao);
 
                 try {
                     //Chama onInsert (CallBack).
                     $this->onInsert();
-                } catch (Exception $e) {
-
+                } catch (\Exception $e) {
+                    
                 }
-
                 return true;
             } else {
-                throw new Exception("Erro ao criar objeto " . $this->nomeEntidade . " no banco de dados.");
+                throw new \Exception("Erro ao criar objeto " . $this->nomeEntidade . " no banco de dados.");
             }
         } else {
-            throw new Exception("Erro ao inserir! A objeto " . $this->nomeEntidade . " ja está criada.");
+            throw new \Exception("Erro ao inserir! A objeto " . $this->nomeEntidade . " ja est� criada.");
         }
     }
 
     /*
      * onInsert()
-     * Método é executado toda vez que ocorre um insert.
+     * M�todo � executado toda vez que ocorre um insert.
      */
 
     protected function onInsert() {
@@ -106,81 +119,81 @@ abstract class ORM {
     }
 
     /* salve()
-     * Método responsível por salvar todos os atributos da classe no banco de dados.
+     * M�todo respons�vel por salvar todos os atributos da classe no banco de dados.
      */
 
-    public function save($addSlaches = true) {
+    public function save() {
         $primaryKey = $this->primaryKey;
 
-        try {
-            $this->beforeSave();
-        } catch (Exception $exIgnore) {
-
-        }
-
         if ($this->validationSave()) {
-            //Verifica se a objeto est criada.
+            //Verifica se a objeto est� criada.
             if ($this->isLoad()) {
                 //Vali do objeto antes de salvar.
                 //Prepara SET da SQL
                 $set = NULL;
+                $valuesArray = array();
+
                 foreach ($this->atributosPersistencia as $atributo) {
-                    if ($addSlaches) {
-                        $set .= $atributo . " = '" . addslashes($this->$atributo) . "',";
-                    } else {
-                        $set .= $atributo . " = '" . ($this->$atributo) . "',";
+                    $set .= $atributo . " = :$atributo,";
+                    if (is_null($this->$atributo)) {
+                        $this->$atributo = "";
                     }
                 }
                 //remove virgula do fim da sql.
                 $set = trim($set);
                 $set = substr($set, 0, -1);
                 $sql = "UPDATE " . $this->tabelaEntidade . " SET $set WHERE " . $this->primaryKey . " = '" . $this->$primaryKey . "'";
-                $conexao = Connection::getConnection();
-                if ($conexao->query($sql)) {
-                    return true;
+
+                $conexao = ConnectionPDO::getConnection();
+                if ($stmt = $conexao->prepare($sql)) {
+                    unset($conexao);
+                    foreach ($this->atributosPersistencia as $atributo) {
+                        $stmt->bindParam(":" . $atributo, $this->$atributo);
+                    }
+
+                    return $stmt->execute();
                 } else {
-                    return false;
+                    throw new \Exception("Erro ao salvar a objeto " . $this->nomeEntidade);
                 }
             } else {
-                if ($this->insert()) {
-                    $this->save();
-                }
+                $this->insert();
             }
         } else {
-            throw new Exception("Erro ao salvar a objeto " . $this->nomeEntidade . ", falha na validação.");
+            throw new \Exception("Erro ao salvar a objeto " . $this->nomeEntidade . ", falha na validação.");
         }
     }
 
     /* delete()
-     * Mtodo responsvel por deletar o objeto do banco de dados.
+     * M�todo respons�vel por deletar o objeto do banco de dados.
      */
 
     public function delete() {
         $primaryKey = $this->primaryKey;
-        //Verifica se a objeto est criada.
+        //Verifica se a objeto est� criada.
         if ($this->isLoad()) {
-            //Chama o mtodo de validao da excluso.
+            //Chama o m�todo de valida��o da exclus�o.
             if ($this->validationDelete()) {
-                $conexao = Connection::getConnection();
+                $conexao = ConnectionPDO::getConnection();
                 if ($conexao->query("DELETE FROM " . $this->tabelaEntidade . " WHERE " . $this->primaryKey . " = '" . $this->$primaryKey . "'")) {
+                    unset($conexao);
                     try {
                         $this->onDelete();
-                    } catch (Exception $e) {
-
+                    } catch (\Exception $e) {
+                        
                     }
                     return true;
                 } else {
-                    throw new Exception("Erro ao excluir objeto " . $this->nomeEntidade . " código " . $this->$primaryKey . " do banco de dados.");
+                    throw new \Exception("Erro ao excluir objeto " . $this->nomeEntidade . " c�digo " . $this->$primaryKey . " do banco de dados.");
                 }
             }
         } else {
-            throw new Exception("Erro ao excluir! O objeto " . $this->nomeEntidade . " não está criado.");
+            throw new \Exception("Erro ao excluir! A objeto " . $this->nomeEntidade . " n�o est� criada.");
         }
     }
 
     /*
      * validationDelete
-     * To do objeto pode sobrescrever este mtodo com seu algoritmo para validar se uma excluso pode ser feita ou no.
+     * To do objeto pode sobrescrever este m�todo com seu algoritmo para validar se uma exclus�o pode ser feita ou n�o.
      */
 
     protected function validationDelete() {
@@ -189,7 +202,7 @@ abstract class ORM {
 
     /*
      * validationSave
-     * To do objeto pode sobrescrever este mtodo com seu algoritmo para validar se uma objeto  pode ser cadastrada ou no.
+     * To do objeto pode sobrescrever este m�todo com seu algoritmo para validar se uma objeto  pode ser cadastrada ou n�o.
      */
 
     protected function validationSave() {
@@ -198,7 +211,7 @@ abstract class ORM {
 
     /*
      * load()
-     * Mtodo responsvel por carregar o valor de todos os atributos da classe buscando os atributos que tem persistencia no banco de dados.
+     * M�todo respons�vel por carregar o valor de todos os atributos da classe buscando os atributos que tem persistencia no banco de dados.
      */
 
     protected function load() {
@@ -206,13 +219,14 @@ abstract class ORM {
         if (!is_null($this->$primaryKey)) {
             //Cria sql do select
             $select = implode(", ", $this->atributosPersistencia);
-            $conexao = Connection::getConnection();
+            $sql = "SELECT " . $this->primaryKey . ", $select FROM " . $this->tabelaEntidade . " WHERE " . $this->primaryKey . " = '" . $this->$primaryKey . "' LIMIT 1";
 
-            $rs = $conexao->query("SELECT " . $this->primaryKey . ", $select FROM " . $this->tabelaEntidade . " WHERE " . $this->primaryKey . " = '" . $this->$primaryKey . "' LIMIT 1");
-            if ($rs) {
-                if ($rs->num_rows) {
-                    $dados = $rs->fetch_assoc();
-
+            $conexao = ConnectionPDO::getConnection();
+            $st = $conexao->prepare($sql);
+            unset($conexao);
+            if ($st->execute()) {
+                if ($st->rowCount()) {
+                    $dados = $st->fetch();
                     //Seta valor da chave primaria
                     $this->$primaryKey = $dados[$this->primaryKey];
 
@@ -225,32 +239,34 @@ abstract class ORM {
                     return false;
                 }
             } else {
-                throw new Exception("Erro ao salvar a objeto " . $this->nomeEntidade . " no banco de dados.");
+                throw new \Exception("Erro ao carregar a objeto " . $this->nomeEntidade . " do banco de dados.");
             }
         } else {
-            throw new Exception("Erro ao carregar objeto " . $this->nomeEntidade . ", o código não foi setado.");
+            throw new \Exception("Erro ao carregar objeto " . $this->nomeEntidade . ", o codigo nao foi setado.");
         }
     }
 
     /* getAll()
-     * Mtodo responsvel por buscar todos os objetos deste tipo de objeto de acordo com os parmetros.
+     * M�todo respons�vel por buscar todos os objetos deste tipo de objeto de acordo com os par�metros.
      */
 
-    public function getAll($where = NULL, $order = NULL, $limit = array('20')) {
-
-        //verifica os parmetros passados.
-        if (!is_array($order) AND !is_null($order)) {
-            throw new Exception("O parametro order é inválido.");
+    public function getAll($where = NULL, $order = NULL, $limit = array('20'), $group = NULL) {
+        //verifica os par�metros passados.
+        if (!is_array($order) AND ! is_null($order)) {
+            throw new \Exception("O parametro order é inválido.");
         }
-        if (!is_array($limit) AND !is_null($limit) AND (is_string($limit) AND $limit != '*')) {
-            throw new Exception("O parametro limit é inválido.");
+        if (!is_array($limit) AND ! is_null($limit) AND ( is_string($limit) AND $limit != '*')) {
+            throw new \Exception("O parametro limit é inválido.");
+        }
+        if (!is_array($group) AND ! is_null($group)) {
+            throw new \Exception("O parametro group é inválido.");
         }
 
         //Armazena atributos entre virtula.
         $atributosSql = implode(", ", $this->atributosPersistencia);
 
         //Inicializa variaveis.
-        $whereSql = $orderSql = $limitSql = NULL;
+        $whereSql = $orderSql = $limitSql = $groupSql = NULL;
 
         if (!is_null($where)) {
             $whereSql = "WHERE " . $where;
@@ -258,19 +274,23 @@ abstract class ORM {
         if (!is_null($order)) {
             $orderSql = "ORDER BY " . implode(", ", $order);
         }
+        if (!is_null($group)) {
+            $groupSql = "GROUP BY " . implode(", ", $group);
+        }
 
-        if (!is_null($limit) AND $limit != '*' AND !empty($limit)) {
+        if (!is_null($limit) AND $limit != '*' AND ! empty($limit)) {
             $limitSql = "LIMIT " . implode(", ", $limit);
         }
-        $sql = trim("SELECT $this->primaryKey, $atributosSql FROM " . $this->tabelaEntidade . " " . $whereSql . " " . $orderSql . " " . $limitSql);
-        $conexao = Connection::getConnection();
+        $sql = trim("SELECT $this->primaryKey, $atributosSql FROM " . $this->tabelaEntidade . " " . $whereSql . " " . $groupSql . " " . $orderSql . " " . $limitSql);
+        $conexao = ConnectionPDO::getConnection();
         $rs = $conexao->query($sql);
+        unset($conexao);
 
         if ($rs) {
             $listaEntidade = array();
-            while ($dados = $rs->fetch_assoc()) {
+            while ($dados = $rs->fetch()) {
                 //Inicializa objeto herdado da entidade.
-                $nomeEntidade = "\\" . $this->nomeEntidade;
+                $nomeEntidade = "" . $this->nomeEntidade;
                 $entidade = new $nomeEntidade();
 
                 //Inseri a primary key da pesquisa.
@@ -287,13 +307,33 @@ abstract class ORM {
             }
             return $listaEntidade;
         } else {
-            throw new Exception("Erro ao executar metodo getAll na objeto " . $this->nomeEntidade);
+            throw new \Exception("Erro ao executar metodo getAll na objeto " . $this->nomeEntidade);
+        }
+    }
+
+    public function countAll($where = NULL) {
+
+        //Inicializa variaveis.
+        $whereSql = NULL;
+
+        if (!is_null($where)) {
+            $whereSql = "WHERE " . $where;
+        }
+        $sql = trim("SELECT COUNT(*) total FROM " . $this->tabelaEntidade . " " . $whereSql);
+        $conexao = ConnectionPDO::getConnection();
+        $rs = $conexao->query($sql);
+        unset($conexao);
+        if ($rs) {
+            $dados = $rs->fetch();
+            return $dados['total'];
+        } else {
+            throw new \Exception("Erro ao executar metodo getAll na objeto " . $this->nomeEntidade);
         }
     }
 
     private function setTabelaEntidade($tabelaEntidade) {
         if (empty($tabelaEntidade)) {
-            throw new Exception("Erro! Tabela  do objeto " . $this->nomeEntidade . " não setada.");
+            throw new \Exception("Erro! Tabela  do objeto " . $this->nomeEntidade . " nao setada.");
         } else {
             $this->tabelaEntidade = $tabelaEntidade;
         }
@@ -301,12 +341,7 @@ abstract class ORM {
 
     public function isLoad() {
         $primaryKey = $this->primaryKey;
-        $primaryKey = (int)$this->$primaryKey;
-        if ($primaryKey > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return !is_null($this->$primaryKey);
     }
 
     protected function persistAttribute($atribute) {
