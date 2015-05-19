@@ -17,14 +17,8 @@ $error = $this->session->getFlashBag()->get('error');
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            <spam class="glyphicon glyphicon-user"></spam> <strong><?php echo $usuario->getNomeCompleto(); ?></strong>
+                            <spam class="glyphicon glyphicon-user"></spam> <strong><?php echo $usuario->getLogin(); ?></strong>
                         </h3>
-                    </div>
-                    <div class="panel-body">
-                        Cadastrado em <?php echo Tool::converteData("Y-m-d H:i:S", "d/m/Y \á\s H:i", $usuario->getDataCadastro()) . " por " . $usuario->getOperadorCadastro(); ?>
-                    </div>
-                    <div class="panel-body">
-                        Grupo: Administrador
                     </div>
                     <div class="panel-body">
                         Login: <?php echo $usuario->getLogin(); ?>

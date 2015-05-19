@@ -1,0 +1,14 @@
+{
+    "authors": [
+        {
+            "name": "Rafael",
+            "email": "rafaelcitj@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/http-foundation": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "": "classes/" }
+    }
+}

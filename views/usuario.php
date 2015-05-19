@@ -24,28 +24,13 @@ Tool::alert("error", $error);
                             <div class="col-sm-1">
                                 <?php echo isset($usuario) ? $usuario->getId() : NULL ?>
                             </div>
-                            <label class="col-sm-2 text-right">Cadastrado</label>
-                            <div class="col-sm-7">
-                                <?php echo Tool::converteData("Y-m-d H:i:S", "d/m/Y \á\s H:i", $usuario->getDataCadastro()) . " por " . $usuario->getOperadorCadastro(); ?>
-                            </div>
+
                         </div>
                     <?php } ?>
                     <div class="form-group">
                         <label for="ativo" class="col-sm-2 control-label">Ativo</label>
                         <div class="col-sm-10">
                             <label><input id="ativo" name="ativo" value="1" type="checkbox" <?php echo (isset($usuario) AND $usuario->getAtivo() OR !isset($usuario)) ? "checked" : NULL ?>/></label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="nome" class="col-sm-2 control-label">Nome</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="nome" name="nome" value="<?php echo isset($usuario) ? $usuario->getNome() : NULL ?>" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="sobrenome" class="col-sm-2 control-label">Sobrenome</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="sobrenome" name="sobrenome" value="<?php echo isset($usuario) ? $usuario->getSobrenome() : NULL ?>" />
                         </div>
                     </div>
                     <div class="form-group">

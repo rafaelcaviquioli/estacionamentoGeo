@@ -6,9 +6,7 @@
             <thead>
                 <tr>
                     <th class="col-sm-1 col-xs-1">Id</th>
-                    <th class="col-sm-4 col-xs-5">Nome</th>
                     <th class="col-sm-2 col-xs-3">Login</th>
-                    <th class="col-sm-3 hidden-xs">Cadastro</th>
                     <th class="col-sm-2 col-xs-3">Opções</th>
                 </tr>
             </thead>
@@ -17,9 +15,7 @@
                     <?php foreach ($this->request->query->get('usuarios') as $usuario) { ?>
                         <tr>
                             <td class="col-sm-1 col-xs-1"><?php echo  $usuario->getId(); ?></td>
-                            <td class="col-sm-4 col-xs-5"><?php echo  $usuario->getNomeCompleto(); ?></td>
                             <td class="col-sm-2 col-xs-3"><?php echo  $usuario->getLogin(); ?></td>
-                            <td class="col-sm-2 hidden-xs"><?php echo  Tool::converteData("Y-m-d H:i:s", "d/m/Y H:i", $usuario->getDataCadastro()); ?></td>
                             <td class='col-sm-2 col-xs-3'>
                                 <div class="hidden-xs">
                                     <a href="?acao=AdmUsuario&id=<?php echo  $usuario->getId(); ?>" class="btn btn-success">Editar</a>
@@ -32,7 +28,7 @@
                                 </div>
                                 <form name="delete" action="?acao=AdmUsuario&id=<?php echo  $usuario->getId(); ?>" method="POST">
                                     <input type="hidden" name="_method" value="DELETE" />
-                                    <?php Tool::modal("Exclusão de usuário", "Confirma a exclusão do usuário " . $usuario->getNomeCompleto() . " ?", "Excluir", $usuario->getId()); ?>
+                                    <?php Tool::modal("Exclusão de usuário", "Confirma a exclusão do usuário " . $usuario->getLogin() . " ?", "Excluir", $usuario->getId()); ?>
                                 </form>
                             </td>
                         </tr>

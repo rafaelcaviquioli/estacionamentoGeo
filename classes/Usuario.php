@@ -9,14 +9,10 @@ class Usuario extends \ORM\UsuarioORM {
     //Atributos padrões de criação.
     protected function beforeInsert() {
         $this->ativo = true;
-        $this->dataCadastro = date("Y-m-d H:i:s");
     }
 
     //Validação de cadastro.
     protected function validationSave() {
-        if (empty($this->nome)) {
-            throw new ValidationException("Nome do usuário não preenchido.");
-        } else
         if (empty($this->login)) {
             throw new ValidationException("Login do usuário não preenchido.");
         } else
@@ -25,38 +21,39 @@ class Usuario extends \ORM\UsuarioORM {
         } else {
             return true;
         }
+
     }
 
     public function autenticar($login, $senha) {
-        $rs = Connection::getConnection()->prepare("SELECT ativo, id, login FROM usuario WHERE login = ? AND senha = MD5(?)");
-        $rs->bind_param('ss', $login, $senha);
-        if ($rs->execute()) {
-            $rs->store_result();
-            $rs->bind_result($ativo, $id, $loginUsuario);
-            $rs->fetch();
-            if ($rs->num_rows == 1) {
-                //Usuário encontrado
-                if ($ativo) {
-                    if (Tool::validaId($id)) {
-                        //Autenticado, retorna o id usuário.
-                        return $id;
-                    } else {
-                        throw new Exception("Erro na autenticação, código do usuário não encontrado.");
-                    }
+        $conexao = ConnectionPDO::getConnection();
+        $stmt = $conexao->prepare("SELECT ativo, id, login FROM usuario WHERE login = :login AND senha = md5(:senha)");
+        if ($stmt === false) {
+            trigger_error('Wrong SQL:  Error: ' . $conexao->errno . ' ' . $conexao->error, E_USER_ERROR);
+        }
+        $stmt->bindValue(':login', $login, PDO::PARAM_STR);
+        $stmt->bindValue(':senha', $senha, PDO::PARAM_STR);
+        $stmt->bindColumn('ativo', $ativo);
+        $stmt->bindColumn('id', $id);
+        $stmt->bindColumn('login', $login);
+        $stmt->execute();
+        $stmt->fetch();
+
+        if ($stmt->rowCount() == 1) {
+            //Usuário encontrado
+            if ($ativo) {
+                if (Tool::validaId($id)) {
+                    //Autenticado, retorna o id usuário.
+                    return $id;
                 } else {
-                    //Usuário desativado
-                    throw new ValidationException("O usuário " . $loginUsuario . " está desativado.");
+                    throw new Exception("Erro na autenticação, código do usuário não encontrado.");
                 }
             } else {
-                throw new ValidationException("Login ou senha inválido.");
+                //Usuário desativado
+                throw new ValidationException("O usuário " . $loginUsuario . " está desativado.");
             }
         } else {
-            throw new Exception("Erro ao buscar usuários do banco de dados.");
+            throw new ValidationException("Login ou senha inválido.");
         }
-    }
-
-    public function getNomeCompleto() {
-        return $this->nome . " " . $this->sobrenome;
     }
 
     public function alterarSenha($senhaAtual, $novaSenha, $confirmaNovaSenha) {

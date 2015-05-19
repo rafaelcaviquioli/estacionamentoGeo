@@ -11,7 +11,6 @@ class EstacionamentoORM extends ORM {
     function __construct($id = NULL) {
         parent::__construct("Estacionamento", "estacionamento", "id");
         // Persistência dos dados.
-        $this->persistAttribute("id");
         $this->persistAttribute("nome");
         $this->persistAttribute("valor");
 

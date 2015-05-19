@@ -32,23 +32,12 @@ class AdmUsuario extends Command {
                     //Busca parametro ID.
                     $id = $this->request->query->get('id');
 
-                    //Busca campos do formulario
-                    $ativo = $this->request->request->get('ativo');
-                    $nome = $this->request->request->get('nome');
-                    $sobrenome = $this->request->request->get('sobrenome');
                     $login = $this->request->request->get('login');
                     $senha = $this->request->request->get('senha');
 
                     $usuario = new Usuario($id);
-                    $usuario->setAtivo($ativo);
-                    $usuario->setNome($nome);
-                    $usuario->setSobrenome($sobrenome);
                     $usuario->setLogin($login);
 
-                    //Caso seja criação inseri operador
-                    if(is_null($id)){
-                        $usuario->setOperadorCadastro($this->session->get('usuario')->getNome());
-                    }
                     
                     if (!is_null($senha)) {
                         $usuario->setSenha($senha);
@@ -56,7 +45,7 @@ class AdmUsuario extends Command {
 
                     $usuario->save();
                     
-                    $message = "Usuário " . $usuario->getNome();
+                    $message = "Usuário " . $usuario->getLogin();
                     $message .= is_null($id) ? " criado com sucesso." : " alterado com sucesso.";
                     $this->session->getFlashBag()->set('success', $message);
                     
@@ -77,7 +66,7 @@ class AdmUsuario extends Command {
                 //Busca parametro ID.
                 $id = $this->request->query->get('id');
                 $usuario = new Usuario($id);
-                $nomeUsuario = $usuario->getNome();
+                $nomeUsuario = $usuario->getLogin();
                 $usuario->delete();
 
                 $this->session->getFlashBag()->set('success', "Usuário $nomeUsuario excluído com sucesso.");

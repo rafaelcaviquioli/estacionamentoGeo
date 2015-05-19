@@ -89,9 +89,9 @@ abstract class ORM {
                 $stmt->execute($valores);
 
                 //Postgresql
-                //$this->$primaryKey = $conexao->lastInsertId($this->tabelaEntidade . "_" . $this->primaryKey . "_seq");
+                $this->$primaryKey = $conexao->lastInsertId($this->tabelaEntidade . "_" . $this->primaryKey . "_seq");
                 //Mysql
-                $this->$primaryKey = $conexao->lastInsertId();
+                //echo $this->$primaryKey = $conexao->lastInsertId();
                 unset($conexao);
 
                 try {

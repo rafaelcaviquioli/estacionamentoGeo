@@ -10,7 +10,6 @@ class VeiculoORM extends ORM {
     function __construct($id = NULL) {
         parent::__construct("Veiculo", "veiculo", "id");
         // Persistência dos dados.
-        $this->persistAttribute("id");
         $this->persistAttribute("placa");
 
         if (!is_null($id)) {
