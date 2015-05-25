@@ -24,15 +24,14 @@ class Usuario extends \ORM\UsuarioORM {
 
     }
 
-    public function autenticar($login, $senha) {
+    public function autenticar($loginDigitado, $senhaDigitada) {
         $conexao = ConnectionPDO::getConnection();
-        $stmt = $conexao->prepare("SELECT ativo, id, login FROM usuario WHERE login = :login AND senha = md5(:senha)");
+        $stmt = $conexao->prepare("SELECT id, login FROM usuario WHERE login = :login AND senha = md5(:senha)");
         if ($stmt === false) {
             trigger_error('Wrong SQL:  Error: ' . $conexao->errno . ' ' . $conexao->error, E_USER_ERROR);
         }
-        $stmt->bindValue(':login', $login, PDO::PARAM_STR);
-        $stmt->bindValue(':senha', $senha, PDO::PARAM_STR);
-        $stmt->bindColumn('ativo', $ativo);
+        $stmt->bindValue(':login', $loginDigitado, PDO::PARAM_STR);
+        $stmt->bindValue(':senha', $senhaDigitada, PDO::PARAM_STR);
         $stmt->bindColumn('id', $id);
         $stmt->bindColumn('login', $login);
         $stmt->execute();
@@ -40,7 +39,7 @@ class Usuario extends \ORM\UsuarioORM {
 
         if ($stmt->rowCount() == 1) {
             //Usuário encontrado
-            if ($ativo) {
+            if ($id) {
                 if (Tool::validaId($id)) {
                     //Autenticado, retorna o id usuário.
                     return $id;

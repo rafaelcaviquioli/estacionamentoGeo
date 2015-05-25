@@ -11,6 +11,9 @@ class Tool {
         try {
             if ($formatoDe == 'd/m/Y') {
                 $valor = implode("-", array_reverse(explode("/", $valor)));
+            }else if ($formatoDe == 'd/m/Y H:i:s') {
+                $valor = explode(" ", $valor);
+                $valor = implode("-", array_reverse(explode("/", $valor[0]))) . " " . $valor[1];
             }
             $dateTime = new DateTime($valor);
             return $dateTime->format($formatoPara);

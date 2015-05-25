@@ -2,3 +2,25 @@
     max-width: 800px;
     min-width: 250px;
 }
+.botao-right {
+  border-left: 0px solid black !important;
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  float: left !important;
+}
+.input-middle {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  float: left;
+}
+.input-left {
+  margin-right: 0 !important;
+  border-right: 0px solid black !important;
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  float: left;
+}

@@ -1,10 +1,8 @@
 <?php
 $success = $this->session->getFlashBag()->get('success');
 $error = $this->session->getFlashBag()->get('error');
-$idiomas = $this->request->query->get('idiomas');
-$categorias = $this->request->query->get('categorias');
-$idiomaAtual = $this->request->query->get('idiomaAtual');
-$categoriaAtual = $this->request->query->get('categoriaAtual');
+$veiculo = $this->request->query->get('veiculo');
+
 
 Tool::alert("success", $success);
 Tool::alert("error", $error);
@@ -84,6 +82,7 @@ Tool::alert("error", $error);
                             <td class="col-sm-5 col-xs-4"><?php echo $veiculo->getPlaca(); ?></td>
                             <td class='col-sm-2 col-xs-3'>
                                 <div class="hidden-xs">
+                                    <a href="?acao=AdmVeiculo&id=<?php echo $veiculo->getId(); ?>&kml" class="btn btn-primary">Kml</a>
                                     <a href="?acao=AdmVeiculo&id=<?php echo $veiculo->getId(); ?>" class="btn btn-success">Editar</a>
                                     <button type="button" data-toggle="modal" data-target="#myModal<?php echo $veiculo->getId(); ?>" class="btn btn-danger">Excluir</button>
                                 </div>

@@ -64,6 +64,7 @@ abstract class ORM {
         }
         $primaryKey = $this->primaryKey;
         //Verifica se a objeto n�o est� criada.
+
         if (!$this->isLoad()) {
 
             $campos = implode(', ', $this->atributosPersistencia);
@@ -79,30 +80,39 @@ abstract class ORM {
             $valuesDoisPonto = implode(", ", $valuesDoisPonto);
 
             $sql = "INSERT INTO " . $this->tabelaEntidade . " ($campos) VALUES ($valuesDoisPonto)";
-            $conexao = ConnectionPDO::getConnection();
+            try {
+                $conexao = ConnectionPDO::getConnection();
 
-            if ($stmt = $conexao->prepare($sql)) {
-                $i = 1;
-                foreach ($this->atributosPersistencia as $atributo) {
-                    $valores[":" . $atributo] = $this->$atributo;
+                if ($stmt = $conexao->prepare($sql)) {
+
+                    $i = 1;
+                    foreach ($this->atributosPersistencia as $atributo) {
+                        $valores[":" . $atributo] = $this->$atributo;
+                    }
+                    if (!$stmt->execute($valores)) {
+                        print_r($conexao->errorInfo());
+                        echo $sql;
+                        die();
+                    }
+                    //Postgresql
+                    $this->$primaryKey = $conexao->lastInsertId($this->tabelaEntidade . "_" . $this->primaryKey . "_seq");
+                    //Mysql
+                    //echo $this->$primaryKey = $conexao->lastInsertId();
+                    unset($conexao);
+
+                    try {
+                        //Chama onInsert (CallBack).
+                        $this->onInsert();
+                    } catch (\Exception $e) {
+                        
+                    }
+                    return true;
+                } else {
+                    throw new \Exception("Erro ao criar objeto " . $this->nomeEntidade . " no banco de dados.");
                 }
-                $stmt->execute($valores);
-
-                //Postgresql
-                $this->$primaryKey = $conexao->lastInsertId($this->tabelaEntidade . "_" . $this->primaryKey . "_seq");
-                //Mysql
-                //echo $this->$primaryKey = $conexao->lastInsertId();
-                unset($conexao);
-
-                try {
-                    //Chama onInsert (CallBack).
-                    $this->onInsert();
-                } catch (\Exception $e) {
-                    
-                }
-                return true;
-            } else {
-                throw new \Exception("Erro ao criar objeto " . $this->nomeEntidade . " no banco de dados.");
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                die();
             }
         } else {
             throw new \Exception("Erro ao inserir! A objeto " . $this->nomeEntidade . " ja est� criada.");
@@ -216,7 +226,7 @@ abstract class ORM {
 
     protected function load() {
         $primaryKey = $this->primaryKey;
-        if (!is_null($this->$primaryKey)) {
+        if (!is_null($this->$primaryKey) AND ! empty($this->$primaryKey)) {
             //Cria sql do select
             $select = implode(", ", $this->atributosPersistencia);
             $sql = "SELECT " . $this->primaryKey . ", $select FROM " . $this->tabelaEntidade . " WHERE " . $this->primaryKey . " = '" . $this->$primaryKey . "' LIMIT 1";
@@ -239,7 +249,7 @@ abstract class ORM {
                     return false;
                 }
             } else {
-                throw new \Exception("Erro ao carregar a objeto " . $this->nomeEntidade . " do banco de dados.");
+                throw new \Exception("Erro ao carregar a objeto " . $this->nomeEntidade . " do banco de dados. ");
             }
         } else {
             throw new \Exception("Erro ao carregar objeto " . $this->nomeEntidade . ", o codigo nao foi setado.");

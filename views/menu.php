@@ -3,8 +3,9 @@
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Estacionamentos<b class="caret"></b></a>
             <ul class="dropdown-menu">
-                <li><a href="?acao=AdmCategoria"><span class="glyphicon glyphicon-plus-sign"></span> Adicionar</a></li>
-                <li><a href="?acao=AdmCategoria&list"><span class="glyphicon glyphicon-search"></span> Consultar</a>
+                <li><a href="?acao=AdmEstacionamento"><span class="glyphicon glyphicon-plus-sign"></span> Adicionar</a></li>
+                <li><a href="?acao=AdmEstacionamento&list"><span class="glyphicon glyphicon-search"></span> Consultar</a>
+                <li><a href="?acao=AdmRastreamento"><span class="glyphicon glyphicon-search"></span> Adicionar dados de rastreamento</a>
                 </li>
             </ul>
         </li>
