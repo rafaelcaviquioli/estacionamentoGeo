@@ -18,9 +18,26 @@ class AdmEstacionamento extends Command {
                     $id = $this->request->query->get('id');
                     $list = $this->request->query->get('list');
                     $kml = $this->request->query->get('kml');
+                    $relatorio = $this->request->query->get('relatorio');
                     $estacionamento = new Estacionamento($id);
 
-                    if (isset($list)) {
+                    if (isset($relatorio)) {
+                        $conexao = \ConnectionPDO::getConnection();
+                        $stmt = $conexao->prepare("SELECT e.nome, v.placa, ve.data_entrada entrada, ve.data_saida saida, e.valor FROM veiculo_estacionamento ve INNER JOIN veiculo v ON v.id = ve.id_veiculo INNER JOIN estacionamento e ON e.id = ve.id_estacionamento");
+                        if ($stmt === false) {
+                            trigger_error('Wrong SQL:  Error: ' . $conexao->errno . ' ' . $conexao->error, E_USER_ERROR);
+                        }
+                        $stmt->execute();
+                        $relatorio = array();
+                        while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            $dados['situacao'] = $dados['saida'] == "" ? false : true;
+                            $relatorio[] = $dados;
+                            
+                        }
+                        $this->request->query->set("relatorio", $relatorio);
+
+                        $content = $this->getRenderViewInBase("relatorio_uso.php");
+                    } else if (isset($list)) {
                         $estacionamentos = $estacionamento->getAll();
 
                         $this->request->query->set("estacionamentos", $estacionamentos);
@@ -40,11 +57,11 @@ class AdmEstacionamento extends Command {
 
                         header('Content-type: text/kml');
                         header("Content-Disposition: attachment; filename=\"$nome.kml\"");
-                        
-                        echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" . 
-                               "<kml xmlns=\"http://www.opengis.net/kml/2.2\"><Placemark>".
-                               "<name>$nome</name>" . $poligono .
-                            "</Placemark></kml>";
+
+                        echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" .
+                        "<kml xmlns=\"http://www.opengis.net/kml/2.2\"><Placemark>" .
+                        "<name>$nome</name>" . $poligono .
+                        "</Placemark></kml>";
                         die();
                     } else {
                         $this->request->query->set("estacionamento", $estacionamento);
@@ -68,6 +85,7 @@ class AdmEstacionamento extends Command {
 
                     $estacionamento->setNome($nome);
                     $estacionamento->setValor($valor);
+                    $estacionamento->save();
 
 
                     $pontos = $this->request->request->get('pontos');
@@ -77,18 +95,21 @@ class AdmEstacionamento extends Command {
                             $pontosTratados[] = str_replace(",", " ", str_replace(" ", "", $ponto));
                         }
                         $poligono = "st_geomfromtext('POLYGON((" . implode(",", $pontosTratados) . "))', 4326)";
-                        //-48.0 -26.0, -48.0 -25.9, -48.0 -25.7,-48.0 -25.6,  -48.0 -26.0
-//                        $conexao = ConnectionPDO::getConnection();
-//                        $stmt = $conexao->prepare("UPDATE estacionamento SET poligono = $poligono WHERE id = :id");
-//                        if ($stmt === false) {
-//                            trigger_error('Wrong SQL:  Error: ' . $conexao->errno . ' ' . $conexao->error, E_USER_ERROR);
-//                        }
-//                        $stmt->bindValue(':id', $id, PDO::PARAM_STR);
-//                        $stmt->execute();
-//                        $stmt->fetch();
-                        $estacionamento->setPoligono($poligono);
+                        $conexao = ConnectionPDO::getConnection();
+                        $sql = "UPDATE estacionamento SET poligono = $poligono WHERE id = :id";
+                        $stmt = $conexao->prepare($sql);
+
+                        if ($stmt === false) {
+                            trigger_error('Wrong SQL:  Error: ' . $conexao->errno . ' ' . $conexao->error, E_USER_ERROR);
+                        }
+                        $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+                        if (!$stmt->execute()) {
+                            print_r($conexao->errorInfo());
+                            echo $sql;
+                            die();
+                        }
+                        $stmt->fetch();
                     }
-                    $estacionamento->save();
 
                     $message = "O estacionamento " . $estacionamento->getId() . " foi";
                     $message .= is_null($id) ? " criado com sucesso." : " alterado com sucesso.";

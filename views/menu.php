@@ -5,7 +5,8 @@
             <ul class="dropdown-menu">
                 <li><a href="?acao=AdmEstacionamento"><span class="glyphicon glyphicon-plus-sign"></span> Adicionar</a></li>
                 <li><a href="?acao=AdmEstacionamento&list"><span class="glyphicon glyphicon-search"></span> Consultar</a>
-                <li><a href="?acao=AdmRastreamento"><span class="glyphicon glyphicon-search"></span> Adicionar dados de rastreamento</a>
+                <li><a href="?acao=AdmRastreamento"><span class="glyphicon glyphicon-plus-sign"></span> Adicionar dados de rastreamento</a>
+                <li><a href="?acao=AdmEstacionamento&relatorio"><span class="glyphicon glyphicon-search"></span> Relatório de Utilização</a>
                 </li>
             </ul>
         </li>

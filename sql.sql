@@ -73,14 +73,43 @@ select addgeometrycolumn('public', 'estacionamento', 'poligono', 4326, 'POLYGON'
 
 
 
-
+/* Trigger da tabela veiculo_posicao */
 CREATE OR REPLACE FUNCTION monitoraPosicao () RETURNS trigger as $$
 
 DECLARE
-	resultado decimal;
+	ponto_anterior_esta_dentro boolean;
+        aux record;
+        aux2 integer := 0;
 BEGIN
-	SELECT st_within(st_geomfromtext(NEW.ponto, 4326), poligono) as ponto_dentro FROM estacionamento
+/* Entrou: */
+    /* Busca por um estacionamento que o ponto esteja dentro do poligono */
+    FOR aux IN SELECT poligono as poligono_estacionamento, id as id_estacionamento, valor as valor_estacionamento  FROM estacionamento WHERE st_within(NEW.ponto, poligono) = true LOOP   
+        /* Encontru estacionamento na posicao atual*/
+        RAISE NOTICE 'Esta Dentro';
+        /* Verifica se a ultima posicao desse veículo foi dentro desse estacionamento*/
+        SELECT INTO ponto_anterior_esta_dentro st_within(ponto, aux.poligono_estacionamento) FROM veiculo_posicao WHERE id_veiculo = NEW.id_veiculo ORDER BY id DESC LIMIT 1;
+        IF ponto_anterior_esta_dentro THEN
+            RAISE NOTICE 'Anterior Esta Dentro';
+        ELSE
+            RAISE NOTICE 'Anterior Esta Fora';
+            /* Hora de estacionar*/
+            INSERT INTO veiculo_estacionamento (id_veiculo, id_estacionamento, data_entrada, valor) VALUES (NEW.id_veiculo, aux.id_estacionamento, NOW(), aux.valor_estacionamento);
+        END IF;
+    END LOOP;
+
+    /* Busca por estacionamentos pendentes e verifica se o carro ainda está dentro. */
+    FOR aux IN SELECT ve.id as id_estacionamento FROM estacionamento e INNER JOIN veiculo_estacionamento ve ON ve.id_estacionamento = e.id WHERE ve.id_veiculo = NEW.id_veiculo AND ve.data_saida IS NULL AND st_within(NEW.ponto, e.poligono) = false LOOP   
+        /* Encontrou um estacionamento pendente para esse veiculo e que não está mais estacionado */
+        RAISE NOTICE 'Esta Fora';
+        UPDATE veiculo_estacionamento SET data_saida = NOW() WHERE id = aux.id_estacionamento;
+    END LOOP;
 	
+	RETURN NEW;
 END;
 
 $$ LANGUAGE plpgsql;
+
+CREATE TRIGGER monitoraPosicao BEFORE INSERT OR UPDATE ON veiculo_posicao FOR EACH ROW EXECUTE PROCEDURE monitoraPosicao();
+
+
+INSERT INTO veiculo_posicao (id_veiculo, data, ponto) VALUES (1, now(), st_geomfromtext('POINT(-23.553441 -46.543114)', 4326))

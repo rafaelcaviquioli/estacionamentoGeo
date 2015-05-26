@@ -32,20 +32,11 @@ class AdmRastreamento extends Command {
                     $posicao = str_replace(",", " ", str_replace(" ", "", $this->request->request->get('posicao')));
                     $ponto = "st_geomfromtext('POINT($posicao)', 4326)";
 
-
-                    $veiculoPosicao = new \VeiculoPosicao();
-                    $veiculoPosicao->setId_veiculo($id_veiculo);
-                    $veiculoPosicao->setData($data);
-                    $veiculoPosicao->save();
-
-                    $id = $veiculoPosicao->getId();
-
                     $conexao = \ConnectionPDO::getConnection();
-                    $stmt = $conexao->prepare("UPDATE veiculo_posicao SET ponto = $ponto WHERE id = :id");
+                    $stmt = $conexao->prepare("INSERT INTO veiculo_posicao (ponto, id_veiculo, data) VALUES ($ponto, '$id_veiculo', '$data')");
                     if ($stmt === false) {
                         trigger_error('Wrong SQL:  Error: ' . $conexao->errno . ' ' . $conexao->error, E_USER_ERROR);
                     }
-                    $stmt->bindValue(':id', $id, \PDO::PARAM_STR);
                     $stmt->execute();
                     $stmt->fetch();
 

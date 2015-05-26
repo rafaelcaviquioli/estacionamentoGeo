@@ -156,12 +156,17 @@ abstract class ORM {
 
                 $conexao = ConnectionPDO::getConnection();
                 if ($stmt = $conexao->prepare($sql)) {
-                    unset($conexao);
+
                     foreach ($this->atributosPersistencia as $atributo) {
                         $stmt->bindParam(":" . $atributo, $this->$atributo);
                     }
 
-                    return $stmt->execute();
+                    if (!$stmt->execute()) {
+                        print_r($conexao->errorInfo());
+                        echo $sql;
+                        die();
+                    }
+                    unset($conexao);
                 } else {
                     throw new \Exception("Erro ao salvar a objeto " . $this->nomeEntidade);
                 }

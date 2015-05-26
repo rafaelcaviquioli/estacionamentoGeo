@@ -7,14 +7,12 @@ class EstacionamentoORM extends ORM {
     protected $id;
     protected $nome;
     protected $valor;
-    protected $poligono;
 
     function __construct($id = NULL) {
         parent::__construct("Estacionamento", "estacionamento", "id");
         // Persistência dos dados.
         $this->persistAttribute("nome");
         $this->persistAttribute("valor");
-        $this->persistAttribute("poligono");
 
         if (!is_null($id)) {
             $this->id = $id;
@@ -46,12 +44,5 @@ class EstacionamentoORM extends ORM {
         $this->valor = $valor;
     }
 
-    function getPoligono() {
-        return $this->poligono;
-    }
-
-    function setPoligono($poligono) {
-        $this->poligono = $poligono;
-    }
 
 }
