@@ -58,9 +58,7 @@ CREATE TABLE veiculo_estacionamento(
 ALTER SEQUENCE veiculo_estacionamento_id_seq owned by veiculo_estacionamento.id;
 
 
-alter table veiculo add primary key (id);
 alter table veiculo_posicao add primary key (id);
-alter table estacionamento add primary key (id);
 alter table veiculo_estacionamento add primary key (id);
 
 alter table veiculo_posicao add foreign key (id_veiculo) references veiculo(id);

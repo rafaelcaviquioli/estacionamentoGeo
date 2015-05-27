@@ -20,7 +20,7 @@ class AdmVeiculo extends Command {
 
                     if (isset($kml)) {
                         $conexao = \ConnectionPDO::getConnection();
-                        $stmt = $conexao->prepare("SELECT st_askml(ponto) ponto, data FROM veiculo_posicao WHERE id_veiculo = :id AND ponto is not null");
+                        $stmt = $conexao->prepare("SELECT st_askml(ST_MakeLine(ponto)) ponto FROM veiculo_posicao WHERE id_veiculo = :id AND ponto is not null");
                         if ($stmt === false) {
                             trigger_error('Wrong SQL:  Error: ' . $conexao->errno . ' ' . $conexao->error, E_USER_ERROR);
                         }

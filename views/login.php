@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Repretec Trading</title>
+        <title>GeoPark</title>
 
         <!-- Bootstrap core CSS -->
         <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
@@ -21,7 +21,6 @@
     <body <?php echo (isset($_POST['login']) ? "onLoad=\"document.getElementById('senha').focus();\"" : NULL)  ?>>
         
         <div class="container">
-            <img src="imagens/pensador.jpg" title="Pensador" />
             <form class="form-signin" method="POST" action="?acao=Login">
                 <h2 class="form-signin-heading">Login</h2>
                 <input type="text" class="form-control" placeholder="Login" id="login" name="login" value="<?php echo isset($_POST['login']) ? $_POST['login'] : NULL ?>" required autofocus>

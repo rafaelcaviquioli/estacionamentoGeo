@@ -23,7 +23,7 @@ class AdmEstacionamento extends Command {
 
                     if (isset($relatorio)) {
                         $conexao = \ConnectionPDO::getConnection();
-                        $stmt = $conexao->prepare("SELECT e.nome, v.placa, ve.data_entrada entrada, ve.data_saida saida, e.valor FROM veiculo_estacionamento ve INNER JOIN veiculo v ON v.id = ve.id_veiculo INNER JOIN estacionamento e ON e.id = ve.id_estacionamento");
+                        $stmt = $conexao->prepare("SELECT e.nome, v.placa, ve.data_entrada entrada, ve.data_saida saida, age(ve.data_entrada, ve.data_saida) as valor FROM veiculo_estacionamento ve INNER JOIN veiculo v ON v.id = ve.id_veiculo INNER JOIN estacionamento e ON e.id = ve.id_estacionamento");
                         if ($stmt === false) {
                             trigger_error('Wrong SQL:  Error: ' . $conexao->errno . ' ' . $conexao->error, E_USER_ERROR);
                         }

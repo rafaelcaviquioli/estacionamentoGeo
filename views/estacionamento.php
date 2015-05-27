@@ -84,7 +84,7 @@ $estacionamento = $this->request->query->get('estacionamento');
                                     <label for="valor" class="col-sm-2 control-label" rel="contador">Ponto <?php echo $i; ?></label>
 
                                     <div class="col-sm-4">
-                                        <input type="text" class="form-control input-left" id="ponto-1" name="pontos[]" value="<?php echo $ponto; ?>" placeholder="Lat, Long" style="width: auto !important;"/>
+                                        <input type="text" class="form-control input-left" id="ponto-1" name="pontos[]" value="<?php echo $ponto; ?>" placeholder="Long, Lat" style="width: auto !important;"/>
                                         <button type="button" class="btn btn-success botao-right" rel="add"><span class="glyphicon glyphicon-plus"></span></button>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@ $estacionamento = $this->request->query->get('estacionamento');
                                 <label for="valor" class="col-sm-2 control-label" rel="contador">Ponto 1</label>
 
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control input-left" id="ponto-1" name="pontos[]" value="" placeholder="Lat, Long" style="width: auto !important;"/>
+                                    <input type="text" class="form-control input-left" id="ponto-1" name="pontos[]" value="" placeholder="Long, Lat" style="width: auto !important;"/>
                                     <button type="button" class="btn btn-success botao-right" rel="add"><span class="glyphicon glyphicon-plus"></span></button>
                                 </div>
                             </div>

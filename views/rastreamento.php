@@ -51,7 +51,7 @@ Tool::alert("success", $success);
                         <label for="titulo" class="col-sm-2 control-label">Posição</label>
 
                         <div class="col-sm-10">
-                            <input type="datetime" class="form-control" id="posicao" name="posicao" value="" placeholder="Lat, Long" />
+                            <input type="datetime" class="form-control" id="posicao" name="posicao" value="" placeholder="Long, Lat" />
                         </div>
                     </div>
                 </div>

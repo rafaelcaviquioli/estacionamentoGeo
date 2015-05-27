@@ -30,7 +30,7 @@ Tool::alert("error", $error);
                             <td class="col-sm-2"><?php echo $estacionamento['placa']; ?></td>
                             <td class="col-sm-2"><?php echo \Tool::converteData("Y-m-d H:i:s", "d/m/Y - H:i", $estacionamento['entrada']); ?></td>
                             <td class="col-sm-2"><?php echo $estacionamento['saida'] != "" ? \Tool::converteData("Y-m-d H:i:s", "d/m/Y - H:i", $estacionamento['saida']) : NULL; ?></td>
-                            <td class="col-sm-2">R$ <?php echo \Tool::formatToMoney($estacionamento['valor']); ?></td>
+                            <td class="col-sm-2">R$ <?php echo ($estacionamento['valor']); ?></td>
                             <td class="col-sm-2" style="font-weight: bold; <?php echo !$estacionamento['situacao'] ? "color: red;" : "color: green;"; ?>"><?php echo $estacionamento['situacao'] ? "Encerrado" : "Estacionado"; ?></td>
                             
                         </tr>
